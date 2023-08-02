@@ -12,8 +12,9 @@ Build:
     $ make
     $ cd ..
 
-Ako nece build treba postaviti `LLVM_DIR`
-$ LLVM_DIR=/home/igor/Kompilatori/llvm-project/llvm
+Ako nece build treba postaviti `LLVM_DIR`:
+
+    $ LLVM_DIR=/home/igor/Kompilatori/llvm-project/llvm
 
 Run:
 
