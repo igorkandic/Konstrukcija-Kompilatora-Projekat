@@ -16,10 +16,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: KyleMayes/install-llvm-action@v1.8.3
+    - name: Cache LLVM and Clang
+      id: cache-llvm
+      uses: actions/cache@v3
       with:
-        version: "10.0"
-        directory: ${{github.workspace}}/llvm
+        path: ./llvm
+        key: llvm-3.5
+    - name: Install LLVM and Clang
+      uses: KyleMayes/install-llvm-action@v1
+      with:
+        version: "3.5"
+        cached: ${{ steps.cache-llvm.outputs.cache-hit }}
 
     - name: Make build folder
       run: mkdir build
