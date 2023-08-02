@@ -18,4 +18,4 @@ Ako nece build treba postaviti `LLVM_DIR`:
 
 Run:
 
-    $ opt -enable-new-pm=0 -load build/DeadArgElim/libDAEPass.* something.c
+    $ opt -enable-new-pm=0 -load build/DeadArgElim/libDAEPass.* something.ll
