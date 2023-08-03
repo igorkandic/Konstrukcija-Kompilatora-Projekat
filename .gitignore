@@ -1,7 +1,7 @@
 build
 *.ll
 examples/*.ll
-
+*.dot
 .vscode/*
 .cache
 !.vscode/settings.json
