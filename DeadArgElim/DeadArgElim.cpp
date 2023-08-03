@@ -19,5 +19,5 @@ namespace {
 
 char DAEPass::ID = 0;
 
-static RegisterPass<DAEPass> X("deadargelim", "Dead Argument Elimination Pass",
+static RegisterPass<DAEPass> X("deadae", "Dead Argument Elimination Pass",
                                     false, false);
