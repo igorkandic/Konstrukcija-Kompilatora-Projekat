@@ -11,7 +11,7 @@ namespace {
     DAEPass() : FunctionPass(ID) {}
 
     virtual bool runOnFunction(Function &F) {
-      errs() << "I saw a function called " << F.getName() << "!\n";
+      errs() << "I saw a function called " << F.getName() << "!\n"; 
       return false;
     }
   };
