@@ -3,6 +3,7 @@ build
 examples/*.ll
 
 .vscode/*
+.cache
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
