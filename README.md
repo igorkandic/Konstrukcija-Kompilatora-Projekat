@@ -25,5 +25,5 @@ Ako nece build treba postaviti `LLVM_DIR`:
 
 Run:
 
-    $ clang -S -emit-llvm -Xclang -disable-O0-optnone something.c
-    $ opt -enable-new-pm=0 -load build/DeadArgElim/libDAEPass.* something.ll
+    $ clang -S -emit-llvm -Xclang -disable-O0-optnone examples/test.c 
+    $ opt -enable-new-pm=0 -load build/DeadArgElim/libDAEPass.* -deadae test.ll
