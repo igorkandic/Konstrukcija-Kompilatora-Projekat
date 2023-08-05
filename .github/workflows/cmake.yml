@@ -21,11 +21,11 @@ jobs:
       uses: actions/cache@v3
       with:
         path: ./llvm
-        key: llvm-3.5
+        key: llvm-14.0
     - name: Install LLVM and Clang
       uses: KyleMayes/install-llvm-action@v1
       with:
-        version: "3.5"
+        version: "14.0"
         cached: ${{ steps.cache-llvm.outputs.cache-hit }}
 
     - name: Make build folder
