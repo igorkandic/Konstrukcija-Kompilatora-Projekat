@@ -1,36 +1,36 @@
 #include <stdio.h>
 
-int svi_mrtvi(int x, int y){
+int svi_mrtvi(int x, int y){ // x, y dead
     return 5;
 }
 
-int jedan_crko(int x, int y, int z){
+int jedan_crko(int x, int y, int z){ // y dead
     return x + z;    
 }
 
-void dva_mrtvaka(int x, int y, int z) {
+void dva_mrtvaka(int x, int y, int z) { // y, z dead
     printf("%d\n",x);
 }
 
-void g(int x, int y){
+void g(int x, int y){ // x dead
     dva_mrtvaka(y,x,y);
 }
 
-void f(int x, int y, int z){
+void f(int x, int y, int z){ // z dead
     int tmp = x;
     g(z,y);
 }
 
-int fakt(int n, int nebitan){
+int fakt(int n, int nebitan){ // not covered
     if(n == 0)
         return 1;
     return n * fakt(n-1,nebitan);
 }
 
-int funkcija(int a, int b) {
+int funkcija(int a, int b) { // b dead
     return a*a;
 }
-int iplusplus(int i){
+int iplusplus(int i){ // i dead
     return 727;
 }
 
