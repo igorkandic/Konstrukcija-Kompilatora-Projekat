@@ -22,6 +22,7 @@
 #include "llvm/IR/ValueMap.h"
 #include "llvm/Transforms/Utils/Cloning.h"
 #include <algorithm>
+#include <llvm-14/llvm/IR/Instructions.h>
 using namespace llvm;
 
 #define DEBUG_TYPE "deadae"
@@ -42,7 +43,9 @@ void deleteUnusedLoads(CallInst* callInst) {
     if (!isa<Constant>(argValue)) {
       if(argValue->getNumUses() == 1){
         Instruction* inst = dyn_cast<Instruction>(argValue->uses().begin()->get());
-        inst->eraseFromParent();
+        if(LoadInst* load = dyn_cast<LoadInst>(inst)){
+          load->eraseFromParent();
+        }
       }
     }
   }
