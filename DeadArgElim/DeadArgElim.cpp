@@ -4,10 +4,10 @@
 #include "llvm/Support/raw_ostream.h"
 #include "llvm/IR/LegacyPassManager.h"
 #include "llvm/Transforms/IPO/PassManagerBuilder.h"
-#include <llvm-14/llvm/IR/BasicBlock.h>
-#include <llvm-14/llvm/IR/Instruction.h>
-#include <llvm-14/llvm/Pass.h>
-#include <llvm-14/llvm/Support/Casting.h>
+#include "llvm/IR/BasicBlock.h"
+#include "llvm/IR/Instruction.h"
+#include "llvm/Pass.h"
+#include "llvm/Support/Casting.h"
 #include "llvm/ADT/DepthFirstIterator.h"
 #include "llvm/Analysis/CallGraph.h"
 using namespace llvm;
