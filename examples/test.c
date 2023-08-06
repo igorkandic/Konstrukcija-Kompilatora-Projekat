@@ -30,6 +30,9 @@ int fakt(int n, int nebitan){
 int funkcija(int a, int b) {
     return a*a;
 }
+int iplusplus(int i){
+    return 727;
+}
 
 int main() {
     int x = 10, y, z;
@@ -40,4 +43,5 @@ int main() {
     f(x,y,z);
     x = fakt(5,y);
     y = funkcija(x,jedan_crko(5,x,2));
+    iplusplus(x++);
 }
